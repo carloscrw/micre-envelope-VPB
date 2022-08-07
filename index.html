@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/telefone.js" defer></script>
+    <script src="./js/mony-eye.js" defer></script>
+    <script src="./js/calculo-tribultos.js" defer></script>
+    <link rel="sortcut icon" href="./img/Logo.png" type="image/x-icon" />
+    <title>Envelope de Tributo</title>
+</head>
+
+<body>
+    <div class="laptop-container">
+    <div class="container-externo">
+        <div class="container-interna">
+            <nav class="logo"><img src="./img/logo-celular.png" alt="Logo"></nav>
+            <nav class="logo2"><img src="./img/logo-pc.png" alt="Logo"></nav>
+            <div class="container-dados">
+               
+                <div class="container-nome">
+                    <h4>Nome:<input type="text"></h4>
+                </div>
+                <div class="container-tel">
+                    <h4>Telefone:<input name="telefone" id="telefone" type="tel" placeholder="Ex.: (61) 91234-1234">
+                    </h4>
+                </div>
+                
+            </div>
+            <div class="container-date-tributo">
+                <div class="data">
+                    <h2>Data: <input class="input-date" type="date">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h2>
+                </div>
+                <div class="tributo">
+                    <div class="container-trib">
+                        <h3>Remuneração Mensal</h3>
+                        <div class="teste">
+
+                            <input id="remuneracao" onkeyup="calcula()"  class="input-trib" type="text">
+                            <input type="checkbox" onclick="mostrarValor()">
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="container-tributos">
+                <div>
+                    <div class="caixa-tributos">
+                        <div>
+                            <h4>Primícia(1/30):</h4>
+                            <div>
+                                <small>lv 23.10<span>/</span>Ez 44.30<span>/</span>Ne 10.37<span>/</span>Nm
+                                    18.12-19<span>/</span>Dt 18.1-4</small>
+                            </div>
+                            <div>
+                                <small>Dt 26.1-4<span>/</span>2 Cr 31.4-11<span>/</span>Pv 3.9-10<span>/</span>Rm
+                                    11.16<span>/</span>Hb 11.14</small>
+                            </div>
+                        </div>
+
+                        <input id="primicia"class="tributos-velue icon" type="text">
+
+
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <div class="caixa-tributos">
+                        <div>
+                            <h4>Dízimo (10%):</h4>
+                            <div>
+                                <small>Lv 27.32-34<span> / </span>Dt 26.12-15<span> / </span>Ne 10.37<span> / </span>2
+                                    Cr 31.4-12</small>
+                            </div>
+                            <div>
+                                <small>Ml 3.6-10<span> / </span> Mt 23.23-24<span> / </span>Hb 7.1-10<span> / </span>Sl
+                                    96.7-9</small>
+                            </div>
+                        </div>
+                        <input onclick="this.select();" type="text" id="dizimo" class="tributos-velue icon" type="text">
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <div class="caixa-tributos">
+                        <div>
+                            <h4>Oferta ao Min. de Socorro (2%):</h4>
+                            <div>
+                                <small>Gl 6.8<span> / </span>Tg 1.7-8<span> / </span>1 Re 17.8-16<span> / </span> Mc
+                                    4.26-29</small>
+                            </div>
+                            <div>
+                                <small>2 Co 9.6-10<span> / </span>Mc 4.1-20<span> / </span>2 Cr 9.6-11
+                                </small>
+                            </div>
+                        </div>
+                        <input id="oferta_minis_socorro" class="tributos-velue icon" type="text">
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <div class="caixa-tributos">
+                        <div>
+                            <h4>Oferta de Gratidão <small>(Voluntária com Proposíto)</small>:</h4>
+                            <div>
+                                <small>Ex 25.2-3 <span> / </span> Ex 34.20<span>/</span> Ex 23.15<span>/</span> Jz
+                                    6.15-18</small>
+                            </div>
+                            <div>
+                                <small>1 Cr 21.21-26<span> / </span> 2 Cr 9.7<span>/</span> Lc 2.21-24<span>/</span> Rm
+                                    13.1-7 </small>
+                            </div>
+                        </div>
+                        <input id="oferta_gratidao" class="tributos-velue icon" type="text" text>
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <div class="caixa-tributos">
+                        <div>
+                            <h4>Semeadura:</h4>
+                            <div>
+                                <small>Ex 23.14-17<span> / </span>1 Re 17.8-24<span> / </span>2 Re 8.1-7<span> /
+                                    </span>Lc 8.1-3</small>
+                            </div>
+                            <div>
+                                <small>Mt 21.33-46<span> / </span>Fp 4.10-19<span> / </span>2 Re 4.1-7</small>
+                            </div>
+                        </div>
+                        <input id="semeadura" class="tributos-velue icon" type="text">
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <div class="caixa-tributos">
+                        <div>
+                            <h4>Oferta para Israel:</h4>
+                            <div>
+                                <small>Jo 4.22-23<span> / </span>Hb 11.8-10<span> / </span>Sl 102.13-22<span> /
+                                    </span>Is 60.10-11</small>
+                            </div>
+                            <div>
+                                <small>Zc 14.16-20 <span>/</span> Rn 15.27 <span>/</span> 2 Co 9.10</small>
+                            </div>
+                        </div>
+                        <input id="oferta_israel" class="tributos-velue icon" type="text">
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="container-total">
+                <div class="total">
+                    <h2>Total da Contribuição:</h2>
+                    <input id="total-contribuicao" class="input-trib icon" type="text">
+                </div>
+            </div>
+            <footer><img src="./img/logo-baixo.png" alt="logo micre rodape"></footer>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
