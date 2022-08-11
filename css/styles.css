@@ -28,7 +28,8 @@ input {
 span {
     color: #da0012;
 }
-.container-date-tributo2{
+
+.container-date-tributo2 {
     display: none;
 }
 
@@ -48,10 +49,10 @@ div {
 }
 
 body {
-    max-width: 100%;
+    /* max-width: 100%;
 
 
-    overflow-x: hidden;
+    overflow-x: hidden; */
 }
 
 
@@ -59,9 +60,8 @@ body {
 .container-externo {
     margin: 0;
     padding: 1px;
-    width: 100vw;
-    height: 100%;
-
+    width: 100%;
+    height: 100vh;
     border: 2px solid;
     border-radius: 5px;
     border-color: #fcb924;
@@ -73,6 +73,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
     border: 2px solid;
     border-radius: 5px;
     border-color: #fcb924;
@@ -84,6 +85,17 @@ nav.logo img {
     margin: auto;
     display: block;
     max-width: 50%;
+    padding-top: 10px;
+}
+
+nav.logo-baixo img {
+    /* width: 30em; */
+    width: 100%;
+    margin: auto;
+    display: block;
+    max-width: 100px;
+    padding-top: 5px;
+
 }
 
 nav.logo2 img {
@@ -140,7 +152,7 @@ input[type="date"] {
 .container-nome input {
     margin: 2px;
     width: 100%;
-    
+
 
     border-radius: 5px;
 }
@@ -154,7 +166,7 @@ input[type="date"] {
 
 .container-date-tributo {
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-direction: column-reverse;
     align-items: center;
 
@@ -186,59 +198,47 @@ input[type="date"] {
 
 .container-tributos {
     padding: 10px;
-    height: 90%;
+
     display: flex;
     flex-direction: column;
 
 
 }
 
-.container-total {
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-}
 
-
-.total h2 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 1.5em;
-    margin-left: 1em;
-    color: rgb(184, 134, 11);
-}
-
-.total input {
-    width: 100%;
-    height: 2em;
-    background: #FFFFFF;
-    border: 2px solid #fcb924;
-    border-radius: 8px;
-    padding-left: 1rem;
-}
 
 input.tributos-velue {
     width: 25%;
-    background: #FFFFFF;
+    background: transparent;
     border: 2px solid #fcb924;
     border-radius: 5px;
 }
 
+
+
 .caixa-tributos {
+
     display: flex;
     flex-direction: column;
     margin-bottom: 1px;
+    justify-content: space-around;
 
 
 }
 
+footer {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
 footer img {
-    width: 70%;
-    margin: auto;
-    display: block;
-    max-width: 40%;
+    width: 100%;
+    height: 100%;
+
+
+
 }
 
 img.img-icon {
@@ -250,6 +250,7 @@ img.img-icon {
 }
 
 input.icon {
+
     background-image: url("/img/real.png");
     background-repeat: no-repeat;
     background-position: left top;
@@ -286,18 +287,80 @@ input:checked[type="checkbox"]::before {
     background: url('/img/eye-of.svg') no-repeat center center / contain;
 }
 
-/* @media only screen and (min-width: 380px) {
+.eye {
+    border: 3px solid #ccc;
+    display: flex;
+    border-radius: 5px;
+    border-color: #fcb924;
+    width: 95%;
 
-    .caixa-tributos {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 1px;
+}
 
-    }
-} */
+.eye>input {
 
-@media only screen and (min-width: 425px) {
+    border: none;
+    color: #fff;
+    padding: 4px 10px;
+}
+
+input.input-trib {
+
+    border: none !important;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    color: black;
+    background: transparent !important;
+}
+
+
+.container-total {
+
+    border: 2px solid #fcb924;
+    border-radius: 5px;
+
+}
+
+.container-total input {
+
+    text-align: center;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0
+}
+
+.total input {
+    height: 2em;
+
+}
+
+.total {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.total-contri {
+    width: 100%;
+}
+
+.total-contri h3 {
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 2em;
+
+}
+
+.container-trib h3 {
+    margin: 0;
+    padding-left: 1em;
+    font-size: 2em;
+}
+
+@media only screen and (min-width: 600px) {
 
 
     .container-date-tributo {
@@ -312,8 +375,23 @@ input:checked[type="checkbox"]::before {
     }
 
     .tributo {
-        width: 50%;
+        width: 100%;
+        justify-content: flex-end;
 
+    }
+
+    .container-trib h3 {
+        text-align: center;
+        padding-left: 0;
+        font-size: 1.8em;
+        padding-right: 10px;
+
+    }
+
+
+    .container-trib {
+
+        width: 40%;
     }
 
     .caixa-tributos {
@@ -321,83 +399,62 @@ input:checked[type="checkbox"]::before {
         flex-direction: row;
         justify-content: space-between;
     }
-}
 
-@media only screen and (min-width: 768px) {
-    nav.logo img {
-
-        width: 50%;
-
+    .total-contri {
+        width: 25%;
     }
 
-    footer img {
-        width: 30%;
-
-    }
-
-    .tributo {
-        border: 0;
-        justify-content: flex-end;
-    }
-
-    .data {
-        padding: 10px;
-        justify-content: flex-start;
-    }
-
-    .container-trib {
-        width: 50%;
-    }
-
-
-    input[type="checkbox"]::before {}
-
-    .container-date-tributo .input-trib {
+    .total {
         width: 100%;
-        height: 1.9em;
+        display: flex;
+        justify-content: flex-end;
 
     }
 
+    .total-contri h3 {
+        text-align: center;
+        margin: 0;
+        padding-top: 10px;
+        font-size: 1.8em;
+
+    }
 }
 
 @media only screen and (min-width: 1024px) {
 
-  .laptop-container{
-    background-image: url(../img/fundo-pc.webp);
-    background-repeat: round;
-    width: 100vw;
-    height: 100vh;    
-    display: flex;
-    padding: 4em;
-    justify-content: center;
-    align-items: baseline;
-   
+    .laptop-container {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background: url('../img/fundo-pc.webp');
+        background-size: cover;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
 
+    }
 
-  }
+    .container-externo {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
 
-    .container-externo {      
-       
-        width: 80vw;
-        max-width: 912px;   
-        height: 60vh;
-        max-height: 792px;
-        min-height: 500px;
-       
     }
 
     .container-interna {
+        height: auto;
         width: 100%;
-        max-width: 1024px;   
-        height:100%;
-        max-height:720px;
-        min-height: 400px;
+        max-height: 450px;
         display: flex;
+        justify-content: space-between;
+
+
     }
 
     nav.logo img {
         display: none;
-}
+    }
 
     nav.logo2 img {
         display: block;
@@ -405,41 +462,68 @@ input:checked[type="checkbox"]::before {
         margin: auto;
         display: block;
         max-width: 100%;
+        padding-bottom: 10px;
     }
-    .container-nome input {
-       
-        width: 47%;   
-        max-width: 800px;      
-    }
-    .container-tel input {
-        
-        width: 45%;
-        max-width: 800px;       
-       }
-     
-       .teste{
-        border: 3px solid #ccc;
-        display: flex;
-        border-radius: 5px;
-        border-color: #fcb924;
-        width: 95%;
-      
-          }
-          .teste > input {
-           
-            border: none;
-            color: #fff;
-            padding: 4px 10px;
-          }
 
-          input.input-trib{
-            
-            border: none !important;
-            box-shadow: 0 0 0 0;
-            border: 0 none;
-            outline: 0;
-            color: black;
-            background: transparent !important;
-          }
-          
+    .container-nome input {
+
+        width: 48%;
+        max-width: 800px;
+    }
+
+    .container-tel input {
+        width: 45%;
+        max-width: 800px;
+    }
+    .container-date-tributo{
+      position: absolute;
+      width:580px;
+      margin-top: 75px;
+      display: flex;
+      flex-direction: row-reverse;
+      padding-left: 10px;
+      margin-top: 35px;
+        
+    }
+    .data{
+        position: absolute;
+        margin-top: 130px;
+        padding-left: 160px;
+        
+       
+    }  
+    
+    .container-trib {
+
+        width: 27%;
+    }
+    .container-trib h3 {
+
+        font-size: 1.5em;
+    }
+
+   
+    input.tributos-velue {
+        width: 25%;      
+      
+        border-radius: 5px;
+    }
+    .total-contri h3 {
+        
+        font-size: 1.4em;
+
+    }
+    input.icon{
+        background-color: transparent ;
+
+    }
+
+    nav.logo-baixo{
+      
+        position: absolute;
+        padding-top: 215px;
+        margin-left: 180px;
+      
+    }
+    
 }
